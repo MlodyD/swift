@@ -1,0 +1,54 @@
+func minValue(a:Int, b:Int) -> Int {
+    if (a<b){
+        return a
+    }
+    return b
+}
+
+func lastDigit(_ number:Int) -> Int {
+    return number%10
+}
+
+func divides(_ dzielnik:Int, _ dzielna:Int) -> Bool {
+    if (dzielna % dzielnik == 0){
+        return true
+    }
+    return false
+}
+
+func countDivisors(_ num:Int) -> Int{
+    var counter = 0
+    for i in 1...num {
+        if (divides(i, num)){
+            counter += 1
+        }
+    }
+    return counter
+}
+
+func isPrime(_ liczba:Int) -> Bool {
+    if (countDivisors(liczba) <= 2)
+    {
+        return true
+    }
+    return false
+}
+
+let min = minValue(a:4,b:5)
+print("minimum z 4 i 5")
+print(min)
+
+let ostatnia = lastDigit(123)
+print("Ostatnia cyfra 123")
+print(ostatnia)
+
+
+print("Liczba Dzielników 4")
+print(countDivisors(4))
+
+print("czy 7 jest pierwsze")
+print(isPrime(7))
+
+print("czy 8 jest pierwsze")
+print(isPrime(8))
+
