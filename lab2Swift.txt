@@ -52,3 +52,4 @@ print(isPrime(7))
 print("czy 8 jest pierwsze")
 print(isPrime(8))
 
+# jestem pedałem
